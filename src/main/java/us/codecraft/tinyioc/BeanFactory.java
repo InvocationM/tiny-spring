@@ -21,9 +21,10 @@ public class BeanFactory {
 	}
 
 	// 删， 去掉bean
-	public BeanDefinition deleteBeanDefinition(String name) {
+	public Object deleteBeanDefinition(String name) {
 		BeanDefinition removedBean = beanDefinitionMap.remove(name);
-		return removedBean;
+        Object bean = removedBean.getBean();
+        return bean;
 	}
 
 	// 改， 需要修改bean嘛？ 不用

@@ -20,6 +20,14 @@ public class BeanFactoryTest {
         HelloWorldService helloWorldService = (HelloWorldService) beanFactory.getBean("helloWorldService");
         helloWorldService.helloWorld();
 
+        // 4.删除bean
+		HelloWorldService helloWorldService1 = (HelloWorldService) beanFactory.deleteBeanDefinition("helloWorldService");
+		helloWorldService1.helloWorld();
 
-    }
+		// 3.获取bean
+		HelloWorldService helloWorldService2 = (HelloWorldService) beanFactory.getBean("helloWorldService");
+		helloWorldService2.helloWorld();
+
+
+	}
 }
