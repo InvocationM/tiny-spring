@@ -2,6 +2,8 @@ package us.codecraft.tinyioc;
 
 /**
  * @author yihua.huang@dianping.com
+ *
+ *   定义了一个bean
  */
 public class BeanDefinition {
 
